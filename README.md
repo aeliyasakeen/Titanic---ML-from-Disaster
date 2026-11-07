@@ -9,8 +9,8 @@ Built in Google Colab with Python, pandas and scikit-learn.
 | Metric | Score |
 |---|---|
 | Hold-out validation accuracy (80/20 split) | ~0.79 |
-| 5-fold cross-validation accuracy | ~0.81 |
-| Kaggle public leaderboard score | _add your score here_ |
+
+
 
 ## Dataset
 
@@ -38,11 +38,6 @@ Main columns: `Pclass`, `Sex`, `Age`, `SibSp`, `Parch`, `Fare`, `Embarked`.
 
 The same cleaning steps are applied to train and test, using values computed from the training data only.
 
-## Findings
-
-- The number of trees (100, 150, 300) made almost no difference in cross-validation.
-- Adding a `Title` feature extracted from `Name` did not noticeably improve the score, since it largely repeats information already in `Sex` and `Age`.
-
 ## How to run
 
 1. Open the notebook in Google Colab.
@@ -55,8 +50,6 @@ import kagglehub
 path = kagglehub.competition_download('titanic')
 ```
 
-Never commit your Kaggle API token to GitHub.
-
 ## Requirements
 
 - Python 3
@@ -67,12 +60,6 @@ Never commit your Kaggle API token to GitHub.
 ```bash
 pip install pandas scikit-learn kagglehub
 ```
-
-## Possible improvements
-
-- Feature engineering such as family size and whether a passenger travelled alone
-- Hyperparameter tuning with grid search
-- Trying other models such as gradient boosting or logistic regression
 
 ## Acknowledgements
 
